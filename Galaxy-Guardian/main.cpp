@@ -9,7 +9,7 @@
 #include <list>
 
 using namespace std;
-
+ 
 bool keys[] = { false, false, false, false, false };
 enum KEYS{ UP, DOWN, LEFT, RIGHT, SPACE };
 
