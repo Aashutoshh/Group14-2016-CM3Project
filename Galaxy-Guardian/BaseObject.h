@@ -44,17 +44,18 @@ public:
 	BaseObject();
 	~BaseObject();
 
+	void init(float, float, float, float, int, int, int, int); // initialization of any object method
+
+
+	/********************************VIRTUAL FUNCTIONS TO BE OVERRIDED BY SUB CLASSES*********************/
 	void virtual DestroyObject(); //Meant to do what a destructor does but instead this is a virtual function that
 	                              //uses inheritance i.e it can be overriden when subclasses make the same call to release
 	                              //resources allocated to that particular object of any sub class. It some cases this is
 	                              //the better option instead of using a default destructor from the base class
-
-	void init(float,float,float,float,int,int,int,int); // initialization of any object method
-
-	// methods for animation and rendering
+	                              // methods for animation and rendering
 	void virtual UpdateObject();  //Virtual functions using inheritance--Gives sub classes opportunity to use them and
 	void virtual RenderObject();  //override them accordingly
-
+	void virtual collided(int iobjType); //Check if current object collided with another
 
 	//Accessor and Mutator with definition
 	float getX(){ return x;  }
@@ -78,7 +79,7 @@ public:
 
 	bool getCollision(BaseObject *otherObject);// checks if current object collided with input object
 
-	void virtual collided(int iobjType); //Check if current object collided with another
+	
 	
 	bool onScreenCollide(); //Combines the onScreen() and checkCollission() methods to only output a true value
 	                       //only if an object is both onscreen and is collidable 
