@@ -25,7 +25,19 @@ protected :
 	int directX, directY; //direction of movement 
 
 	int boundaryX, boundaryY; //boundary condition
+
 //Attributes for animation and rendering 
+	int maxFrame;
+	int curFrame;
+	int frameCount;
+	int frameDelay;
+	int frameWidth;
+	int frameHeight;
+	int animationColumns;
+	int animationDirection;
+
+	// declaring the bitmap image pointer for using the bitmaps 
+	ALLEGRO_BITMAP *image;
 
 public:
 	BaseObject();
