@@ -4,7 +4,7 @@
 #include <string>
 
 using namespace std;
-//Main base object class declarations
+//Main base object class declarations 
 //All sub classes inherit from this class
 
 #include <allegro5/allegro5.h>
