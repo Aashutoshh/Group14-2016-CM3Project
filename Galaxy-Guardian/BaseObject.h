@@ -2,6 +2,7 @@
 #ifndef BASEOBJECT_H
 #define BASEOBJECT_H
 #include <string>
+#include "Global.h"
 
 using namespace std;
 //Main base object class declarations 
@@ -44,7 +45,7 @@ public:
 	BaseObject();
 	~BaseObject();
 
-	void init(float, float, float, float, int, int, int, int); // initialization of any object method
+	void Init(float, float, float, float, int, int, int, int); // initialization of any object method
 
 
 	/********************************VIRTUAL FUNCTIONS TO BE OVERRIDED BY SUB CLASSES*********************/
@@ -55,7 +56,7 @@ public:
 	                              // methods for animation and rendering
 	void virtual UpdateObject();  //Virtual functions using inheritance--Gives sub classes opportunity to use them and
 	void virtual RenderObject();  //override them accordingly
-	void virtual collided(int iobjType); //Check if current object collided with another
+	void virtual Collided(int iobjType); //Check if current object collided with another
 
 	//Accessor and Mutator with definition
 	float getX(){ return x;  }

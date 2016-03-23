@@ -1,6 +1,4 @@
 #include <iostream>
-
-
 #include "BaseObject.h"
 
 /*Class Definitions for Methods, Constructors and Destructors Here!!*/
@@ -48,7 +46,7 @@ void BaseObject::DestroyObject()
 	//to release their own associated resources. Demos inheritance and polymorphism
 }
 
-void BaseObject::init(float ix, float iy, float ispeedX, float ispeedY, int idirectX, int idirectY, int iboundaryX, int iboundaryY){
+void BaseObject::Init(float ix, float iy, float ispeedX, float ispeedY, int idirectX, int idirectY, int iboundaryX, int iboundaryY){
 
 	// performs generic setup of the common variables used in the program by all objects
 	x = ix;
@@ -105,7 +103,7 @@ bool BaseObject::getCollision(BaseObject *otherObject)
 		return false;
 }
 
-void BaseObject::collided(int iobjType){
+void BaseObject::Collided(int iobjType){
 	//Only exists to be virtual to give sub classes the ability to override it based on their objects collision status
 }
 

@@ -13,7 +13,7 @@ private: int tries, score, animationRow;  //Attributes unique to Spaceship
 public:
 	Spaceship();
 	~Spaceship();
-	void init(ALLEGRO_BITMAP *image = NULL); //initializer function to set up space craft
+	void Init(ALLEGRO_BITMAP *iimage = NULL); //initializer function to set up space craft
 
 	//Functions which overload and override the base class virtual functions
 	void DestroyObject();  //Overrides virtual function from the base class
