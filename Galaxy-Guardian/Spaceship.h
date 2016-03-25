@@ -13,6 +13,11 @@ private: int tries, score, animationRow;  //Attributes unique to Spaceship
 public:
 	Spaceship();
 	~Spaceship();
+
+	//NB THIS INIT FUNCTION IS NOT THE SAME AS THE BASE CLASS OBJECT INIT METHOD
+	//This is only used to initialize the spaceship if the user passes an image to it
+	//This way we don't have to keep creating and destroying the spaceship each time the game is played.
+	//It merely loads the image which is set along with other initializer attbs.
 	void Init(ALLEGRO_BITMAP *iimage = NULL); //initializer function to set up space craft
 
 	//Functions which overload and override the base class virtual functions

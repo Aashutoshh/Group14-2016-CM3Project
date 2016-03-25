@@ -98,7 +98,11 @@ bool BaseObject::onScreenCollide()
 
 void BaseObject::Collided(int iobjType){
 	//Only exists to be virtual to give sub classes the ability to override it based on their objects collision status
+	//After we determine that we collided with something, we can call this function to determine exactly what TYPE of
+	//of object we collided with.
 }
+
+	
 
 //Methods for updating object position and rendering
 
