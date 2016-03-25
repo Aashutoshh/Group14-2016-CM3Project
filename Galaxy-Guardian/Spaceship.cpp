@@ -39,7 +39,7 @@ void Spaceship::Init(ALLEGRO_BITMAP *iimage)
 	score = 0;
 
 	maxFrame = 3;       //NB These values are based on the sprite sheet for the spaceship --PM
-	curFrame = 0;       //These will be different for other objects based on their own sprite sheets
+	curFrame = 0;       //These will be different for other objects based on their own sprite sheet
 	frameWidth = 46;
 	frameHeight = 41;
 	animationColumns = 3;

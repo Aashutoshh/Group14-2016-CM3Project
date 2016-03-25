@@ -25,7 +25,7 @@ protected :
 
 	int directX, directY; //direction of movement 
 
-	int boundaryX, boundaryY; //boundary of area surrounding an object
+	int boundaryX, boundaryY; //boundary of area surrounding an object --> used for collission detection
 
 //Attributes for animation and rendering 
 
@@ -35,8 +35,8 @@ protected :
 	int frameDelay; 
 	int frameWidth; //Width of sprite image from an index in the sprite sheet
 	int frameHeight; //Height of sprite image from an index in the sprite sheet
-	int animationColumns;
-	int animationDirection;
+	int animationColumns; //Number of columns in the sprite sheet
+	int animationDirection; //Direction in move the animation updates
 
 	// declaring the bitmap image pointer for using the bitmaps 
 	ALLEGRO_BITMAP *image;
