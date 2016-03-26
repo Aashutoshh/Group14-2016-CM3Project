@@ -227,6 +227,41 @@ int main()
 			(*itr1)->UpdateObject();
 		}
 
+		//COLLISIONS CONSIDERATIONS FOR UPDATING
+		for (itr1 = gameObjects.begin(); itr1 != gameObjects.end(); ++itr1)
+		{
+			if (!(*itr1)->onScreenCollide()) //if object is both not on screen and collidable move on to the next one
+				continue;
+			for (itr2 = itr1; itr2 != gameObjects.end(); ++itr2) //itr2 starts pointing at itr1 object upon collision detection
+			{
+				if (!(*itr2)->onScreenCollide()) // again if object is both not on screen and collidable move on to the next one
+					continue;
+				if ((*itr1)->getObjType() == (*itr2)->getObjType())  //We don't care if alike objects collide with each other
+					continue;
+				if ((*itr1)->getCollision((*itr2))) //Check if the objects of differing types have collided
+				{
+					(*itr1)->Collided((*itr2)->getObjType());
+					(*itr2)->Collided((*itr1)->getObjType()); //Tell the 2 objects that they collided into each other
+				}
+
+			}
+		}
+
+		//FREE UP MEMORY AS SOON AS AN OBJECT GOES OFF SCREEN
+		//HELPS US PUT MORE AND MORE OBJECTS ON SCREEN WITHOUT AFFECTING MEMORY TOO MUCH
+		for (itr1 = gameObjects.begin(); itr1 != gameObjects.end();)  //we leave out the ++itr1 part here since the body updates
+		{
+			if (!(*itr1)->getOnScreen())
+			{
+				delete (*itr1);
+				itr1 = gameObjects.erase(itr1);  //NB We don't call the destroy method here since we don't 
+			}                                    //want to destroy the bitmap images at this stage
+			else
+			{
+				itr1++;
+			}
+		}                               
+
 
 		//======================================================================================================
 		//RENDER==>UPDATE THE OBJECT'S POSITION ON SCREEN AND DRAW IT ACCORDINGLY
@@ -271,7 +306,7 @@ int main()
 	for (itr1 = gameObjects.begin(); itr1 != gameObjects.end();)  //we leave out the ++itr1 part here since the body updates
 	{
 		(*itr1)->DestroyObject();
-		delete (*itr1);              //Delete the objects themselves
+		delete (*itr1);                  //Delete the objects themselves
 		itr1 = gameObjects.erase(itr1);  //Remove this index of itr1 completely then return back to the next
 	}                                    //Loop updation in body 
 

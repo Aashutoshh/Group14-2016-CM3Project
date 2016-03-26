@@ -59,7 +59,7 @@ void BaseObject::Init(float ix, float iy, float ispeedX, float ispeedY, int idir
 }
 
 
-bool BaseObject::getCollision(BaseObject *otherObject)
+bool BaseObject::getCollision(BaseObject *otherObject) //Main method for using bounding box detection for collision detection
 {
 	//Get the x,y position of the incoming input object in temp variables
 	float otherX = otherObject->getX();
