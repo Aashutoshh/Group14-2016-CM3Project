@@ -71,7 +71,7 @@ void Spaceship::mvRIGHT()
 	directX = 1;  //right is regarded as a positive horizontal direction in allegro
 }
 
-void Spaceship::animationReset(int pos)
+void Spaceship::animationReset(int pos) //Reset the ships animation if its stops moving
 {
 	if (pos == 1)
 	{
@@ -168,7 +168,7 @@ void Spaceship::Collided(int iobjType)
 
 	if (health == 0)
 	{
-		tries--; //Lose a trie if health equals to 0 due to collisions with bullets
+		tries--; //Lose a try if health equals to 0 due to collisions with bullets
 	}
 
 	if (iobjType == POWERUP)
