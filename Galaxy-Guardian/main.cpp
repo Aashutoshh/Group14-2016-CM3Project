@@ -217,8 +217,8 @@ int main()
 
 			//BEGIN PROJECT RENDERING
 
-			//al_draw_textf(font18, al_map_rgb(255, 0, 255), 5, 5, 0, "Player has %i lives left. Player has destroyed %i objects",
-			//	ship1->getTries(), ship1->getScore());
+			al_draw_textf(font18, al_map_rgb(255, 0, 255), 5, 5, 0, "Player has %i lives left. Player has destroyed %i objects",
+			ship1->getTries(), ship1->getScore());
 
 			//Draw the ship
 			ship1->UpdateObject();

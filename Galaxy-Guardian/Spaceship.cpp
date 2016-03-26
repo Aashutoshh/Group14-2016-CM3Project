@@ -30,6 +30,7 @@ void Spaceship::Init(ALLEGRO_BITMAP *iimage)
 
 	tries = 3;
 	score = 0;
+	health = 100; // Start off with a full bar of health
 
 	maxFrame = 3;       //NB These values are based on the sprite sheet for the spaceship --PM
 	curFrame = 0;       //These will be different for other objects based on their own sprite sheet
@@ -159,4 +160,25 @@ void Spaceship::Collided(int iobjType)
 {
 	if (iobjType == ENEMY)  //If we see we collided with an enemy craft then we lose a try
 		tries--;
+
+	//Adding in cases to consider when colliding with bullets and power ups
+
+	if (iobjType == BULLET) //Decrease health by 10 points when hit by an enemy bullet
+		health = health - 10;
+
+	if (health == 0)
+	{
+		tries--; //Lose a trie if health equals to 0 due to collisions with bullets
+	}
+
+	if (iobjType == POWERUP)
+	{
+		health = health + 25;  //increase health by 25 points
+
+		if (health >= 100)
+		{
+			health = 100;  //If our power ups gave us more than 100 health reset health to 100
+			tries++;       //and increase a try or a life for the player
+		}
+	}
 }

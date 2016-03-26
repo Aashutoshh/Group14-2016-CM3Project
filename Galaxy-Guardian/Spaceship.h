@@ -10,6 +10,7 @@
 class Spaceship : public BaseObject    //Inheriting from base class
 {
 private: int tries, score, animationRow;  //Attributes unique to Spaceship
+		 int health; //Start off with some hit points
 public:
 	Spaceship();
 	~Spaceship();
