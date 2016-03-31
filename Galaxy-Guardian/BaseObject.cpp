@@ -48,7 +48,7 @@ void BaseObject::DestroyObject()
 	//to release their own associated resources. Demos inheritance and polymorphism
 }
 
-void BaseObject::init(float ix, float iy, float ispeedX, float ispeedY, int idirectX, int idirectY, int iboundaryX, int iboundaryY){
+void BaseObject::Init(float ix, float iy, float ispeedX, float ispeedY, int idirectX, int idirectY, int iboundaryX, int iboundaryY){
 
 	// performs generic setup of the common variables used in the program by all objects
 	x = ix;
@@ -93,10 +93,10 @@ bool BaseObject::getCollision(BaseObject *otherObject)
 
 	//Check for collision conditions between the 2 objects
 	//Collision checking algortihm based on object centers and boundaries
-	if (x + oboundX > otherX - oboundX &&
-		x - oboundX < otherX + oboundX &&
-		y + oboundY > otherY - oboundY &&
-		y - oboundY < otherY + oboundY)
+	if (x + boundaryX > otherX - oboundX &&
+		x - boundaryX < otherX + oboundX &&
+		y + boundaryY > otherY - oboundY &&
+		y - boundaryY < otherY + oboundY)
 
 	{
 		return true;
@@ -105,7 +105,7 @@ bool BaseObject::getCollision(BaseObject *otherObject)
 		return false;
 }
 
-void BaseObject::collided(int iobjType){
+void BaseObject::Collided(int iobjType){
 	//Only exists to be virtual to give sub classes the ability to override it based on their objects collision status
 }
 

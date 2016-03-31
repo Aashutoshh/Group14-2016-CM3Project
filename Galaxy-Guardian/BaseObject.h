@@ -49,7 +49,7 @@ public:
 	                              //resources allocated to that particular object of any sub class. It some cases this is
 	                              //the better option instead of using a default destructor from the base class
 
-	void init(float,float,float,float,int,int,int,int); // initialization of any object method
+	void Init(float ix,float iy,float ispeedX,float ispeedY,int idirectX,int idirectY,int iboundaryX,int iboundaryY); // initialization of any object method
 
 	// methods for animation and rendering
 	void virtual UpdateObject();  //Virtual functions using inheritance--Gives sub classes opportunity to use them and
@@ -78,7 +78,7 @@ public:
 
 	bool getCollision(BaseObject *otherObject);// checks if current object collided with input object
 
-	void virtual collided(int iobjType); //Check if current object collided with another
+	void virtual Collided(int iobjType); //Check if current object collided with another
 	
 	bool onScreenCollide(); //Combines the onScreen() and checkCollission() methods to only output a true value
 	                       //only if an object is both onscreen and is collidable 
