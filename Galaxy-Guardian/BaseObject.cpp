@@ -72,10 +72,10 @@ bool BaseObject::getCollision(BaseObject *otherObject) //Main method for using b
 
 	//Check for collision conditions between the 2 objects
 	//Collision checking algortihm based on object centers and boundaries
-	if (x + oboundX > otherX - oboundX &&
-		x - oboundX < otherX + oboundX &&
-		y + oboundY > otherY - oboundY &&
-		y - oboundY < otherY + oboundY)
+	if (x + boundaryX > otherX - oboundX &&
+		x - boundaryX < otherX + oboundX &&
+		y + boundaryY > otherY - oboundY &&
+		y - boundaryY < otherY + oboundY)
 
 	{
 		return true;
