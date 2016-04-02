@@ -21,5 +21,7 @@ public:
 	//Functions to override base class Virtual Functions
 	void DestroyObject();
 	void UpdateObject();
+	void RenderObject();
+	void Collided(int objectID);
 };
 

@@ -27,7 +27,7 @@ void Bulllet::DestroyObject(){
 	BaseObject::DestroyObject();
 }
 
-// Update to check whether a collision occurred 
+// Update the object
 void Bulllet::UpdateObject(){
 
 BaseObject::UpdateObject();
@@ -35,4 +35,24 @@ BaseObject::UpdateObject();
 	if (x > width)
 		Collided(BORDER);
 }
+
+//Render the object 
+void Bulllet::RenderObject(){
+
+	//The bullet  formed is simply a white primitive circle
+	al_draw_filled_circle(x, y, 2, al_map_rgb(255, 255, 255)); 
+}
+
+
+// check whether a collision occurred if certain conditions are met
+void Bulllet::Collided(int objectID)
+{
+	if (objectID == ENEMY || objectID == BORDER)
+		setOnScreen(false);
+
+	if (objectID == ENEMY)
+		ScorePoint();
+}
+
+
 
