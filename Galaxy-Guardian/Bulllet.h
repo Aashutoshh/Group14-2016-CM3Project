@@ -15,6 +15,11 @@ private:
 public:
 	Bulllet();
 	~Bulllet();
-	Bulllet(float x, float y, void(*ScorePoint)(void));
+    Bulllet(float x, float y, void(*ScorePoint)(void));
+
+
+	//Functions to override base class Virtual Functions
+	void DestroyObject();
+	void UpdateObject();
 };
 
