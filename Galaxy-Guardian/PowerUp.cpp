@@ -3,6 +3,7 @@
 
 PowerUp::PowerUp()
 {
+	
 }
 
 
