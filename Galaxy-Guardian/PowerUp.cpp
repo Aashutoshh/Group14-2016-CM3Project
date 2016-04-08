@@ -65,3 +65,15 @@ void PowerUp::UpdateObject()
 		Collided(BORDER);
 	}
 }
+
+void PowerUp::RenderObject()
+{
+
+
+	BaseObject::RenderObject(); 
+	int fx = (curFrame % animationColumns) * frameWidth;
+	int fy = (curFrame / animationColumns) * frameHeight;      
+
+
+	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);
+}
