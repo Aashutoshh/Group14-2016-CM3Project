@@ -77,3 +77,11 @@ void PowerUp::RenderObject()
 
 	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);
 }
+
+void PowerUp::Collided(int iobjectType)
+{
+	if (iobjectType == PLAYER)
+	{
+		setOnScreen(false);    //If it collides with the player then it dissappears off screen
+	}
+}
