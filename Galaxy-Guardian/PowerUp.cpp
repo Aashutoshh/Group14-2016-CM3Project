@@ -35,3 +35,33 @@ PowerUp::PowerUp(float xpos, float ypos, ALLEGRO_BITMAP *iimage)
 PowerUp::~PowerUp()
 {
 }
+
+//destroy base object
+void PowerUp::DestroyObject()
+{
+	BaseObject::DestroyObject();
+}
+
+void PowerUp::UpdateObject()
+{
+	BaseObject::UpdateObject();
+
+	if (++frameCount >= frameDelay)
+	{
+		curFrame += animationDirection;
+		if (curFrame >= maxFrame)
+		{
+			curFrame = 0;
+		}
+		else if (curFrame <= 0)
+		{
+			curFrame = maxFrame - 1;
+		}
+		frameCount = 0;
+	}
+
+	if (x + frameWidth < 0)
+	{
+		Collided(BORDER);
+	}
+}
