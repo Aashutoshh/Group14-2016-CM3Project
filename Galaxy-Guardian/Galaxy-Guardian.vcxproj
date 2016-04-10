@@ -97,6 +97,13 @@
     <ClInclude Include="PowerUp.h" />
     <ClInclude Include="Spaceship.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Desktop\AlienCode\asteroid-1-96.png" />
+    <Image Include="..\..\..\..\Desktop\AlienCode\baddie.bmp" />
+    <Image Include="..\..\..\..\Desktop\AlienCode\HealthStars-crop1.png" />
+    <Image Include="..\..\..\..\Desktop\AlienCode\powerball.png" />
+    <Image Include="..\..\..\..\Desktop\AlienCode\spaceship_by_arboris.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
