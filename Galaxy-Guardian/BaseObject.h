@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "Global.h"
+#include "Globals.h"
 
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>

@@ -15,7 +15,7 @@
 #include <ctime>
 
 #include "BaseObject.h"
-#include "Global.h"
+#include "Globals.h"
 #include "Alien.h"
 #include "Spaceship.h"
 #include "Bullet.h"
