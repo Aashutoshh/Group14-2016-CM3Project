@@ -157,7 +157,7 @@ void Spaceship::bossesDown()
 
 void Spaceship::Collided(int iobjType)
 {
-	if (iobjType == ALIEN || iobjType == ENEMY)
+	if (iobjType == ALIEN || iobjType == ENEMY || iobjType == BOSS)
 	{
 		x = 20;  //If you collided with enemy reset player ship back to default position
 		y = 200;

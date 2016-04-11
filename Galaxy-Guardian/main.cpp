@@ -1,22 +1,31 @@
-//Created Branch Praneel
-//NOTE TO GROUP on 23 March 2016:
-//Hi guys. I've completed the spaceship declarations and definition files. I've also designed the main.cpp file
-//to test out its updation and rendering onscreen. Feel free to copy this layout to test the rendering of your own
-//assigned class objects. However do your testing in your OWN branch and do not merge to master without consulting.
-//DO NOT ALTER THE CODE IN MY BRANCH ;-)  --PRANEEL MISTHRY 23/3/16
 
+#include <stdio.h>
 #include <allegro5/allegro.h>
-#include <allegro5/allegro_image.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_font.h>
 #include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_image.h>
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_acodec.h>
-#include <list>                       //Using list of objects to automatically update them based on inheritance scheme
 
-#include "Global.h"
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <cmath>
+#include <ctime>
+
 #include "BaseObject.h"
+#include "Global.h"
+#include "Alien.h"
 #include "Spaceship.h"
+#include "Bullet.h"
+#include "AlienBullet.h"
+#include "PowerUp.h"
+#include "Explosion.h"
+#include "Background.h"
+#include "Asteroid.h"
+#include "SubBoss.h"
+#include <list>
 
 using namespace std;
  
@@ -284,7 +293,7 @@ int main()
 			}
 
 			al_draw_textf(font18, al_map_rgb(255, 0, 255), 5, 5, 0, "Player has %i lives left. Player has destroyed %i objects",
-			ship1->getTries(), ship1->getScore());
+			ship1->getTries(), ship1->getEnemiesDestroyed());
 
 			//Draw the ship
 			//ship1->UpdateObject();
