@@ -1,6 +1,4 @@
 #include <iostream>
-
-
 #include "BaseObject.h"
 
 /*Class Definitions for Methods, Constructors and Destructors Here!!*/
@@ -42,13 +40,9 @@ BaseObject::~BaseObject()
 	//Default Base Class blank Destructor
 }
 
-void BaseObject::DestroyObject()
-{
-	//Similar to a blank destructor except this can be overridden by sub class objects
-	//to release their own associated resources. Demos inheritance and polymorphism
-}
 
-void BaseObject::Init(float ix, float iy, float ispeedX, float ispeedY, int idirectX, int idirectY, int iboundaryX, int iboundaryY){
+void BaseObject::Init(float ix, float iy, float ispeedX, float ispeedY, int idirectX, int idirectY, int iboundaryX, int iboundaryY)
+{
 
 	// performs generic setup of the common variables used in the program by all objects
 	x = ix;
@@ -60,36 +54,22 @@ void BaseObject::Init(float ix, float iy, float ispeedX, float ispeedY, int idir
 	directX = idirectX;
 	directY = idirectY;
 
-	boundaryX = iboundaryX;
+	boundaryX = iboundaryX; 
 	boundaryY = iboundaryY;
 
 }
 
-//Methods for updating object position and rendering
 
-void BaseObject::UpdateObject(){
-
-	//Every object will update in a similar manner depending on its x,y position and
-	//speedx, speedy values.
-	//If an object is meant to be stationery we just set its speed to 0 stopping its updation any further
-
-	x += speedX*directX;
-	y += speedY*directY;
-}
-
-void BaseObject::RenderObject(){
-	//This only exists in base class to be made virtual so sub classes can override it with their own rendering
-}
-
-bool BaseObject::getCollision(BaseObject *otherObject)
+bool BaseObject::getCollision(BaseObject *otherObject) //Main method for using bounding box detection for collision detection
 {
 	//Get the x,y position of the incoming input object in temp variables
 	float otherX = otherObject->getX();
 	float otherY = otherObject->getY();
 
 	//Get the boundaries surrounding the incoming object in temp variables
-	float oboundX = otherObject->getX();
-	float oboundY = otherObject->getY();
+	//Using bounding box collission detection
+	float oboundX = otherObject->getBoundaryX();
+	float oboundY = otherObject->getBoundaryY();
 
 	//Check for collision conditions between the 2 objects
 	//Collision checking algortihm based on object centers and boundaries
@@ -105,9 +85,6 @@ bool BaseObject::getCollision(BaseObject *otherObject)
 		return false;
 }
 
-void BaseObject::Collided(int iobjType){
-	//Only exists to be virtual to give sub classes the ability to override it based on their objects collision status
-}
 
 bool BaseObject::onScreenCollide()
 {
@@ -115,7 +92,45 @@ bool BaseObject::onScreenCollide()
 	//Otherwise it returns a false
 	return onScreen && checkCollision;
 }
+
+//*******************************************************************************************************************//
+//==========Virtual Function Overriding methods. Can be used to add to or override the default vfs===============//
+//***************************************************************************************************************//
+
+void BaseObject::Collided(int iobjType)
+{
+	//Only exists to be virtual to give sub classes the ability to override it based on their objects collision status
+	//After we determine that we collided with something, we can call this function to determine exactly what TYPE of
+	//of object we collided with.
+}
+
 	
+
+//Methods for updating object position and rendering
+
+void BaseObject::UpdateObject()
+{
+	//Every object will update in a similar manner depending on its x,y position and
+	//speedx, speedy values.
+	//If an object is meant to be stationery we just set its speed to 0 stopping its updation any further
+
+	x += speedX*directX;
+	y += speedY*directY;
+}
+
+void BaseObject::RenderObject()
+{
+	//This only exists in base class to be made virtual so sub classes can override it with their own rendering
+}
+
+
+void BaseObject::DestroyObject()
+{
+	//Similar to a blank destructor except this can be overridden by sub class objects
+	//to release their own associated resources. Demos inheritance and polymorphism
+}
+
+
 
 
 
