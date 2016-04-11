@@ -16,6 +16,13 @@ Spaceship::~Spaceship()
 	//blank default destructor
 }
 
+void Spaceship::DestroyObject()    //Overrides vf in base class
+{
+	BaseObject::DestroyObject();  //Call the base destroyer method
+	//Get used to using scope res when calling methods from base class to avoid
+	//confusion.
+}
+
 void Spaceship::Init(ALLEGRO_BITMAP *iimage)
 {
 	//We use this to initialize the spaceship instead since we pass an image
@@ -44,6 +51,38 @@ void Spaceship::Init(ALLEGRO_BITMAP *iimage)
 
 	if (iimage != NULL)
 		Spaceship::image = iimage;	
+}
+
+void Spaceship::UpdateObject()   //can override vf in base class
+{
+	BaseObject::UpdateObject(); //Call base class virtual function to get initial values for updating any object
+	//This way we get the original values before using inheritance and polymorphism to override them
+	//Now set the values according to what we want for our space ship
+	if (x < 0)
+		x = 0;
+	else if (x > width)
+		x = width;       //Keeps the space craft within horizontal bounds of the screen
+
+	if (y < 0)
+		y = 0;
+	else if (y > height)
+		y = height;    //Keeps the space craft within the vertical bounds of the screen
+}
+
+void Spaceship::RenderObject()
+{
+	BaseObject::RenderObject(); //Call base class virtual function just in case we update it later
+	//Also gives us values that were initially set by base class vf before we may override them
+
+	//Animation Updating
+	int fx = (curFrame % animationColumns) * frameWidth;
+	int fy = animationRow * frameHeight;
+
+	//Allegro drawing bitmap functions set up here for the space ship
+	//NB must resolve in main.cpp to avoid unresolved symbols compilation error when building
+
+	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);
+
 }
 
 
