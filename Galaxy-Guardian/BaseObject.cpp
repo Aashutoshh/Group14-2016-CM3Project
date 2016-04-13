@@ -1,6 +1,4 @@
 #include <iostream>
-
-
 #include "BaseObject.h"
 
 /*Class Definitions for Methods, Constructors and Destructors Here!!*/
@@ -42,13 +40,8 @@ BaseObject::~BaseObject()
 	//Default Base Class blank Destructor
 }
 
-void BaseObject::DestroyObject()
-{
-	//Similar to a blank destructor except this can be overridden by sub class objects
-	//to release their own associated resources. Demos inheritance and polymorphism
-}
 
-void BaseObject::init(float ix, float iy, float ispeedX, float ispeedY, int idirectX, int idirectY, int iboundaryX, int iboundaryY){
+void BaseObject::Init(float ix, float iy, float ispeedX, float ispeedY, int idirectX, int idirectY, int iboundaryX, int iboundaryY){
 
 	// performs generic setup of the common variables used in the program by all objects
 	x = ix;
@@ -60,10 +53,56 @@ void BaseObject::init(float ix, float iy, float ispeedX, float ispeedY, int idir
 	directX = idirectX;
 	directY = idirectY;
 
-	boundaryX = iboundaryX;
+	boundaryX = iboundaryX; 
 	boundaryY = iboundaryY;
 
 }
+
+
+bool BaseObject::getCollision(BaseObject *otherObject) //Main method for using bounding box detection for collision detection
+{
+	//Get the x,y position of the incoming input object in temp variables
+	float otherX = otherObject->getX();
+	float otherY = otherObject->getY();
+
+	//Get the boundaries surrounding the incoming object in temp variables
+	//Using bounding box collission detection
+	float oboundX = otherObject->getX();
+	float oboundY = otherObject->getY();
+
+	//Check for collision conditions between the 2 objects
+	//Collision checking algortihm based on object centers and boundaries
+	if (x + boundaryX > otherX - oboundX &&
+		x - boundaryX < otherX + oboundX &&
+		y + boundaryY > otherY - oboundY &&
+		y - boundaryY < otherY + oboundY)
+
+	{
+		return true;
+	}
+	else
+		return false;
+}
+
+
+bool BaseObject::onScreenCollide()
+{
+	//Will only return true if an object is BOTH alive and collidable
+	//Otherwise it returns a false
+	return onScreen && checkCollision;
+}
+
+//*******************************************************************************************************************//
+//==========Virtual Function Overriding methods. Can be used to add to or override the default vfs===============//
+//***************************************************************************************************************//
+
+void BaseObject::Collided(int iobjType){
+	//Only exists to be virtual to give sub classes the ability to override it based on their objects collision status
+	//After we determine that we collided with something, we can call this function to determine exactly what TYPE of
+	//of object we collided with.
+}
+
+	
 
 //Methods for updating object position and rendering
 
@@ -81,41 +120,14 @@ void BaseObject::RenderObject(){
 	//This only exists in base class to be made virtual so sub classes can override it with their own rendering
 }
 
-bool BaseObject::getCollision(BaseObject *otherObject)
+
+void BaseObject::DestroyObject()
 {
-	//Get the x,y position of the incoming input object in temp variables
-	float otherX = otherObject->getX();
-	float otherY = otherObject->getY();
-
-	//Get the boundaries surrounding the incoming object in temp variables
-	float oboundX = otherObject->getX();
-	float oboundY = otherObject->getY();
-
-	//Check for collision conditions between the 2 objects
-	//Collision checking algortihm based on object centers and boundaries
-	if (x + oboundX > otherX - oboundX &&
-		x - oboundX < otherX + oboundX &&
-		y + oboundY > otherY - oboundY &&
-		y - oboundY < otherY + oboundY)
-
-	{
-		return true;
-	}
-	else
-		return false;
+	//Similar to a blank destructor except this can be overridden by sub class objects
+	//to release their own associated resources. Demos inheritance and polymorphism
 }
 
-void BaseObject::collided(int iobjType){
-	//Only exists to be virtual to give sub classes the ability to override it based on their objects collision status
-}
 
-bool BaseObject::onScreenCollide()
-{
-	//Will only return true if an object is BOTH alive and collidable
-	//Otherwise it returns a false
-	return onScreen && checkCollision;
-}
-	
 
 
 
