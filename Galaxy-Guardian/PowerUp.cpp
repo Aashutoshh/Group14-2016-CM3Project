@@ -9,10 +9,10 @@ PowerUp::PowerUp()
 	
 }
 
-PowerUp::PowerUp(float xpos, float ypos, ALLEGRO_BITMAP *iimage)
+PowerUp::PowerUp(float ix, float iy, ALLEGRO_BITMAP *iimage)
 {
 	//initalizing object of type base
-	BaseObject::Init(xpos, ypos, 5, 0, -1, 0, 35, 35);//initialize base object
+	BaseObject::Init(ix, iy, 5, 0, -1, 0, 35, 35);//initialize base object
 	
 	setObjType(POWER);//set type
 
