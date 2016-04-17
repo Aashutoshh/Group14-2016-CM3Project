@@ -7,7 +7,7 @@ class PowerUp
 {
 public:
 	PowerUp();
-	PowerUp(float xpos, float ypos, ALLEGRO_BITMAP *iimage)//Overloading constructor
+	PowerUp(float ix, float iy, ALLEGRO_BITMAP *iimage)//Overloading constructor
 	~PowerUp();
 
 	
