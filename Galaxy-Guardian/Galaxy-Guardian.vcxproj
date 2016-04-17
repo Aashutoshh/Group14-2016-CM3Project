@@ -95,7 +95,7 @@
     <ClInclude Include="Boss.h" />
     <ClInclude Include="Bulllet.h" />
     <ClInclude Include="Explosion.h" />
-    <ClInclude Include="Global.h" />
+    <ClInclude Include="Globals.h" />
     <ClInclude Include="PowerUp.h" />
     <ClInclude Include="Spaceship.h" />
   </ItemGroup>
