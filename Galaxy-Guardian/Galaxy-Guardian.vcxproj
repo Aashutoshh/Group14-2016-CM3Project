@@ -79,25 +79,31 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Alien.cpp" />
+    <ClCompile Include="AlienBullet.cpp" />
+    <ClCompile Include="Asteroid.cpp" />
     <ClCompile Include="Background.cpp" />
     <ClCompile Include="BaseObject.cpp" />
     <ClCompile Include="Boss.cpp" />
-    <ClCompile Include="Bulllet.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PowerUp.cpp" />
     <ClCompile Include="Spaceship.cpp" />
+    <ClCompile Include="SubBoss.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alien.h" />
+    <ClInclude Include="AlienBullet.h" />
+    <ClInclude Include="Asteroid.h" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="BaseObject.h" />
     <ClInclude Include="Boss.h" />
-    <ClInclude Include="Bulllet.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Explosion.h" />
-    <ClInclude Include="Global.h" />
+    <ClInclude Include="Globals.h" />
     <ClInclude Include="PowerUp.h" />
     <ClInclude Include="Spaceship.h" />
+    <ClInclude Include="SubBoss.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

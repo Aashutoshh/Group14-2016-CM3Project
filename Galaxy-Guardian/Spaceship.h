@@ -1,16 +1,20 @@
 #pragma once
-#ifndef SPACESHIP_H
-#define SPACESHIP_H
-#include <string>
 
+#include <string>
 #include "BaseObject.h"
+
+using namespace std;
 //Declaration for the main player spaceship class
 //This declares the attributes and methods for our player space craft in the game
 
 class Spaceship : public BaseObject    //Inheriting from base class
 {
-private: int tries, score, animationRow;  //Attributes unique to Spaceship
-		 int health; //Start off with some hit points
+private: 
+	int tries, enemiesDestroyed, animationRow;  //Attributes unique to Spaceship
+	int bossesDestroyed;
+	int shipHealth;
+	int pwrupsCollected;   //Number of power ups collected --> add it to score as they update score as well
+
 public:
 	Spaceship();
 	~Spaceship();
@@ -37,11 +41,15 @@ public:
 	                              //Useful when craft is destroyed by enemy
 
 	int getTries();  //Accessors
-	int getScore();
+	int getEnemiesDestroyed();
+	int getBossesDestroyed();
+	int getHealth();
+	int getPwrup();
 
+	void setTry(int iTry){ tries = iTry; }
+	void addTry();  //Used to increased tries if enough power ups collected
 	void loseTry(); //called when player character dies
-	void addScore(); //Updates player score
-
+	void loseHealth(); //called when player gets hit by enemy fire
+	void bodyCount(); //Updates player score
+	void bossesDown(); //adds up boss ships death toll
 };
-
-#endif
