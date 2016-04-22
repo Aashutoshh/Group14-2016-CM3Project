@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include"BaseObject.h"
 #include <string>
 
@@ -11,7 +10,7 @@ private:
 	void(*TakeHealth)(void);  //Pointer to fully global function in main.cpp
 
 public:
-	AlienBullet(float ix, float iy, void(*TakeHealth)(void));
+	AlienBullet(float ix, float iy, ALLEGRO_BITMAP *iimage, void(*TakeHealth)(void));
 	~AlienBullet();
 
 	//Functions to override base class Virtual Functions
@@ -21,10 +20,4 @@ public:
 	void Collided(int objectID);
 };
 
-class AlienBullet
-{
-public:
-	AlienBullet();
-	~AlienBullet();
-};
 
