@@ -89,6 +89,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PowerUp.cpp" />
     <ClCompile Include="Spaceship.cpp" />
+    <ClCompile Include="SubBoss.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alien.h" />
@@ -102,13 +103,7 @@
     <ClInclude Include="Globals.h" />
     <ClInclude Include="PowerUp.h" />
     <ClInclude Include="Spaceship.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\..\Desktop\AlienCode\asteroid-1-96.png" />
-    <Image Include="..\..\..\..\Desktop\AlienCode\baddie.bmp" />
-    <Image Include="..\..\..\..\Desktop\AlienCode\HealthStars-crop1.png" />
-    <Image Include="..\..\..\..\Desktop\AlienCode\powerball.png" />
-    <Image Include="..\..\..\..\Desktop\AlienCode\spaceship_by_arboris.png" />
+    <ClInclude Include="SubBoss.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
