@@ -14,7 +14,7 @@
 #include <allegro5/allegro_acodec.h>
 #include <list>                       //Using list of objects to automatically update them based on inheritance scheme
 
-#include "Global.h"
+#include "Globals.h"
 #include "BaseObject.h"
 #include "Spaceship.h"
 

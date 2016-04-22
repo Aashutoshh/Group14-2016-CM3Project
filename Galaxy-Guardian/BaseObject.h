@@ -1,8 +1,7 @@
 #pragma once
-#ifndef BASEOBJECT_H
-#define BASEOBJECT_H
+
 #include <string>
-#include "Global.h"
+#include "Globals.h"
 
 using namespace std;
 //Main base object class declarations 
@@ -89,5 +88,5 @@ public:
 
 };
 
-#endif
+
 

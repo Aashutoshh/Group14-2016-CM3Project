@@ -3,11 +3,13 @@
 
 //Declaration for special items class --> power ups and health
 
-class PowerUp
+using namespace std;
+ 
+class PowerUp : public BaseObject
 {
 public:
 	PowerUp();
-	PowerUp(float xpos, float ypos, ALLEGRO_BITMAP *iimage)//Overloading constructor
+	PowerUp(float xpos, float ypos, ALLEGRO_BITMAP *iimage);//Overloading constructor
 	~PowerUp();
 
 	
