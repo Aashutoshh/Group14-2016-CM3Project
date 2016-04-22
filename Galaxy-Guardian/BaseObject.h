@@ -3,13 +3,17 @@
 #include <string>
 #include "Globals.h"
 
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_primitives.h>
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_ttf.h>
+
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
+
 using namespace std;
 //Main base object class declarations 
 //All sub classes inherit from this class
-
-#include <allegro5/allegro5.h>
-#include <allegro5/allegro_primitives.h>
-
 //Declarations
 
 class BaseObject{
@@ -69,6 +73,11 @@ public:
 
 	void setX(int ix){ x = ix; }
 	void setY(int iy){ y = iy; }
+	void setspeedX(int ispeedX){ speedX = ispeedX; } //set horizontal speed
+	void setspeedY(int ispeedY){ speedY = ispeedY; }
+	void setdirectX(int idirectX){ directX = idirectX; }
+	void setdirectY(int idirectY){ directY = idirectY; }
+	void setImage(ALLEGRO_BITMAP *iimage){ image = iimage; }
 
 	void setObjType(int iobjType){ objType = iobjType; } 
 	int getObjType(){ return objType; }
@@ -82,10 +91,8 @@ public:
 	bool getCollision(BaseObject *otherObject);// checks if current object collided with input object
 	                                           //Used to see if object crashed into another object using polymorphism
 	                                           
-	
 	bool onScreenCollide(); //Combines the onScreen() and checkCollission() methods to only output a true value
 	                       //only if an object is both onscreen and is collidable 
-
 };
 
 

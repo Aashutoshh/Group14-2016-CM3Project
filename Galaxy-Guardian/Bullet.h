@@ -1,12 +1,14 @@
 #pragma once
 #include "BaseObject.h"
-
+#include <string>
 //Declaration for spaceship bullet class
 
-class Bulllet
+class Bullet :  public BaseObject
 {
+private:
+
 public:
-	Bulllet();
-	~Bulllet();
+	Bullet();
+	~Bullet();
 };
 
