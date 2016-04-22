@@ -82,7 +82,7 @@
     <ClCompile Include="Background.cpp" />
     <ClCompile Include="BaseObject.cpp" />
     <ClCompile Include="Boss.cpp" />
-    <ClCompile Include="Bulllet.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PowerUp.cpp" />
@@ -93,9 +93,9 @@
     <ClInclude Include="Background.h" />
     <ClInclude Include="BaseObject.h" />
     <ClInclude Include="Boss.h" />
-    <ClInclude Include="Bulllet.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Explosion.h" />
-    <ClInclude Include="Global.h" />
+    <ClInclude Include="Globals.h" />
     <ClInclude Include="PowerUp.h" />
     <ClInclude Include="Spaceship.h" />
   </ItemGroup>

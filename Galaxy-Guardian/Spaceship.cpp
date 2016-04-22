@@ -171,7 +171,7 @@ void Spaceship::Collided(int iobjType)
 		tries--; //Lose a try if health equals to 0 due to collisions with bullets
 	}
 
-	if (iobjType == POWERUP)
+	if (iobjType == POWER)
 	{
 		health = health + 25;  //increase health by 25 points
 
