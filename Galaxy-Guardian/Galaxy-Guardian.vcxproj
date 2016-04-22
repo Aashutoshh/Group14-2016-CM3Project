@@ -79,6 +79,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Alien.cpp" />
+    <ClCompile Include="AlienBullet.cpp" />
+    <ClCompile Include="Asteroid.cpp" />
     <ClCompile Include="Background.cpp" />
     <ClCompile Include="BaseObject.cpp" />
     <ClCompile Include="Boss.cpp" />
@@ -90,6 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alien.h" />
+    <ClInclude Include="AlienBullet.h" />
+    <ClInclude Include="Asteroid.h" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="BaseObject.h" />
     <ClInclude Include="Boss.h" />
