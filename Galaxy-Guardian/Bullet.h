@@ -8,8 +8,8 @@ using namespace std;
 
 //Declaration for spaceship bullet class
 // Polymorphism displayed 
-class Bullet :  public BaseObject
-{
+class Bullet :  public BaseObject{
+	 
 private:
 	void(*enemiesDown)(void);
 	void(*bossesKilled)(void);
