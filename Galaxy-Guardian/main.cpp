@@ -49,6 +49,10 @@ list < BaseObject *>::iterator itr2;  //created an iterator of BaseObject type c
 //prototypes
 /*Insert prototypes of necessary global functions here for main.cpp*/
 //======================================================================================================================
+void __cdecl TakeLife();
+void __cdecl enemiesDown();
+void _cdecl bossesKilled();
+void _cdecl TakeHealth();
 
 int main()
 {
@@ -331,6 +335,29 @@ int main()
 	al_destroy_display(display);
 
 	return 0;
+}
+
+//Body of fully global functions to be used by the classes
+//Allows other classes to access the ship methods
+
+void __cdecl enemiesDown()   //Fully global function to add a score point
+{
+	ship1->bodyCount();
+}
+
+void __cdecl TakeLife()   //Fully global function to lose a try
+{
+	ship1->loseTry();
+}
+
+void _cdecl TakeHealth() //Fully global functions to lose 25 points of health
+{
+	ship1->loseHealth();
+}
+
+void _cdecl bossesKilled()
+{
+	ship1->bossesDown();
 }
 
 
