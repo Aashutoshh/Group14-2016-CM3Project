@@ -56,6 +56,11 @@ void Bullet::RenderObject(){
 
 void Bullet::Collided(int objectID){
 	
+	if (objectID == ENEMY || objectID == BORDER || objectID == ALIEN || objectID == BOSS)
+		setOnScreen(false);
+
+	if (objectID == ENEMY || objectID == ALIEN)
+		enemiesDown();
 }
 
 Bullet::~Bullet(){
