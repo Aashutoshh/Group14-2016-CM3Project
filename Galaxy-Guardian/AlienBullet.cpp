@@ -35,13 +35,18 @@ void AlienBullet::UpdateObject()
 {
 	BaseObject::UpdateObject();
 
-	//Alien bullet specific updation
+	if (++frameCount >= frameDelay)
+	{
+		if (++curFrame >= maxFrame)
+			curFrame = 0;
 
+		frameCount = 0;
+	}
 
-	//What happens when a bullet reaches the border
 	if (x < 0)
 		Collided(BORDER);
 }
+
 
 void AlienBullet::RenderObject()
 {
