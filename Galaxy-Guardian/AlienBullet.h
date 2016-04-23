@@ -20,4 +20,3 @@ public:
 	void Collided(int objectID);
 };
 
-

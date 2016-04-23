@@ -1,5 +1,4 @@
 #include "AlienBullet.h"
-#include "BaseObject.h"
 #include <iostream>
 #include <cstdio>
 #include <string>
@@ -52,12 +51,11 @@ void AlienBullet::UpdateObject()
 		Collided(BORDER);
 }
 
-
 void AlienBullet::RenderObject()
 {
 	BaseObject::RenderObject();
 
-	//al_draw_filled_circle(x, y, 8, al_map_rgb(255, 170, 255)); //Bullet is a simple magenta primitive circle
+	//al_draw_filled_circle(x, y, 8, al_map_rgb(255, 170, 255)); //Bullet is simply a magenta primitive circle
 
 	int fx = curFrame*frameWidth;   //For simple one row sprite sheets
 	int fy = 0;
