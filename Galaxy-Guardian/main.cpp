@@ -128,6 +128,7 @@ int main()
 	//==============================================================================================================================//
 	//========    SET UP OF THE ALIENS USING THE SET UP GLOBAL FUNCTION      ======================================================//
 	//==============================================================================================================================//
+
 	//Player bullet image
 	powerBulletImage = al_load_bitmap("PowerBullet.png");// load the power bullet image 
 	al_convert_mask_to_alpha(powerBulletImage, al_map_rgb(255, 0, 255)); //Since background is magenta
