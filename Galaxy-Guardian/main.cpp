@@ -37,7 +37,7 @@ enum KEYS{ UP, DOWN, LEFT, RIGHT, SPACE, A }; //Enumeration for key input arra
 //============================================================================================================
 
 Spaceship *ship1;  //Created our spaceship object pointer
-
+Bullet *bullet;
 //Create the updation list of objects
 list < BaseObject *> gameObjects;   //Created a list of BaseObject type called gameObjects
 
@@ -73,6 +73,7 @@ int main()
 	ship1 = new Spaceship; //Using dynamic memory to create our player ship from the heap
 
 	ALLEGRO_BITMAP *shipImage = NULL;
+	ALLEGRO_BITMAP *powerBulletImage = NULL;
 
 	//=================================================================================================================
 	//Allegro Variables Here
@@ -124,6 +125,13 @@ int main()
 	                              //Shows inheritance and polymorphism. Better than an array since we don't know how big
 	                               //our array should be. With a list of base type objects we can just push and pop --PM.
 
+	//==============================================================================================================================//
+	//========    SET UP OF THE ALIENS USING THE SET UP GLOBAL FUNCTION      ======================================================//
+	//==============================================================================================================================//
+	//Player bullet image
+	powerBulletImage = al_load_bitmap("PowerBullet.png");
+	al_convert_mask_to_alpha(powerBulletImage, al_map_rgb(255, 0, 255)); //Since background is magenta
+	al_convert_mask_to_alpha(powerBulletImage, al_map_rgb(255, 255, 255)); //Make white lines transparent
 
 	//========================================================================================================
 	//INITIALIZE THE TIMER FOR TIMED EVENTS IN THE MAIN GAME LOOP
@@ -193,8 +201,19 @@ int main()
 			case ALLEGRO_KEY_DOWN:
 				keys[DOWN] = false;
 				break;
-			case ALLEGRO_KEY_SPACE:
-				keys[SPACE] = false;
+			case ALLEGRO_KEY_SPACE:{
+
+				//NB The space bar is used to transition between states as well as for firing the bullets
+				//Hence the space bar performs many functions --> similar to a one button masher game
+				
+			
+	            //Use the space key for bullets once bullet code is done
+					bullet = new Bullet(ship1->getX() + 17, ship1->getY(), &enemiesDown, &bossesKilled, powerBulletImage);
+					gameObjects.push_back(bullet);  //NB A BULLET IS ONLY CREATED WHEN THE SPACE KEY IS PRESSED
+					
+				
+				
+			}
 				break;
 			}
 		}
