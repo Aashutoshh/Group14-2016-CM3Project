@@ -10,14 +10,19 @@ using namespace std;
 
 AlienBullet::AlienBullet(float ix, float iy, ALLEGRO_BITMAP *iimage, void(*TakeHealth)(void))
 {
-	BaseObject::Init(ix, iy, 10, 0, -1, 0, 0, 0);
+	BaseObject::Init(ix, iy, 10, 0, -1, 0, 15, 15);
 	setObjType(ALIENBULLET);
 
-	//Animation parameters. Frame count etc etc
+	maxFrame = 4; //1
+	curFrame = 0;
+	frameCount = 0;
+	frameDelay = 10;   //Delay of close to 10 fools the human into seeing motion in animation
+	frameWidth = 50; //32
+	frameHeight = 19; //32
+	animationColumns = 4; //1
 
-
-	//Pass in the animation image
 	image = iimage;
+
 	AlienBullet::TakeHealth = TakeHealth;
 }
 
