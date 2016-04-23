@@ -37,7 +37,7 @@ enum KEYS{ UP, DOWN, LEFT, RIGHT, SPACE, A }; //Enumeration for key input arra
 //============================================================================================================
 
 Spaceship *ship1;  //Created our spaceship object pointer
-Bullet *bullet;
+Bullet *bullet; //Created bullet pointer 
 //Create the updation list of objects
 list < BaseObject *> gameObjects;   //Created a list of BaseObject type called gameObjects
 
@@ -73,7 +73,7 @@ int main()
 	ship1 = new Spaceship; //Using dynamic memory to create our player ship from the heap
 
 	ALLEGRO_BITMAP *shipImage = NULL;
-	ALLEGRO_BITMAP *powerBulletImage = NULL;
+	ALLEGRO_BITMAP *powerBulletImage = NULL; // initialise the bitmap image
 
 	//=================================================================================================================
 	//Allegro Variables Here
@@ -129,7 +129,7 @@ int main()
 	//========    SET UP OF THE ALIENS USING THE SET UP GLOBAL FUNCTION      ======================================================//
 	//==============================================================================================================================//
 	//Player bullet image
-	powerBulletImage = al_load_bitmap("PowerBullet.png");
+	powerBulletImage = al_load_bitmap("PowerBullet.png");// load the power bullet image 
 	al_convert_mask_to_alpha(powerBulletImage, al_map_rgb(255, 0, 255)); //Since background is magenta
 	al_convert_mask_to_alpha(powerBulletImage, al_map_rgb(255, 255, 255)); //Make white lines transparent
 
