@@ -47,10 +47,13 @@ void AlienBullet::RenderObject()
 {
 	BaseObject::RenderObject();
 
-	//Test with a simple circle before using animation
-	al_draw_filled_circle(x, y, 8, al_map_rgb(255, 170, 255)); //Bullet is simply a white primitive circle
+	//al_draw_filled_circle(x, y, 8, al_map_rgb(255, 170, 255)); //Bullet is a simple magenta primitive circle
 
-	//After testing primitive circle, replace it with rendering parameters for bullet sprite sheet
+	int fx = curFrame*frameWidth;   //For simple one row sprite sheets
+	int fy = 0;
+
+	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight,
+		x - frameWidth / 2, y - frameHeight / 2, 0);
 }
 
 
