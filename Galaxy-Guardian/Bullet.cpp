@@ -26,14 +26,29 @@ Bullet::Bullet(float x, float y, void(*enemiesDown)(void), void(*bossesKilled)(v
 
 void Bullet::DestroyObject(){
 	
+	BaseObject::DestroyObject();
 }
 
 void Bullet::UpdateObject(){
-	
+	BaseObject::UpdateObject();
+
+	if (++frameCount >= frameDelay)
+	{
+		if (++curFrame >= maxFrame)
+			curFrame = 0;
+
+		frameCount = 0;
+	}
+
+	if (x > width)
+		Collided(BORDER);
 }
 
 void Bullet::RenderObject(){
+	BaseObject::RenderObject();
 
+	//al_draw_filled_circle(x, y, 2, al_map_rgb(255, 255, 255)); //Bullet is a simple white primitive circle
+	al_draw_bitmap_region(image, curFrame * frameWidth, 0, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);
 	
 
 	
