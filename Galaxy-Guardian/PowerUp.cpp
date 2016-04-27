@@ -1,6 +1,10 @@
 #include "PowerUp.h"
-#include "BaseObject.h"
+#include <string>
+#include <iostream>
 #include <cstdio>
+#include "BaseObject.h"
+
+
 using namespace std;
 
 PowerUp::PowerUp()
@@ -68,8 +72,6 @@ void PowerUp::UpdateObject()
 
 void PowerUp::RenderObject()
 {
-
-
 	BaseObject::RenderObject(); 
 	int fx = (curFrame % animationColumns) * frameWidth;
 	int fy = (curFrame / animationColumns) * frameHeight;      
@@ -80,8 +82,8 @@ void PowerUp::RenderObject()
 
 void PowerUp::Collided(int iobjectType)
 {
-	if (iobjectType == PLAYER)
+	if (iobjectType == PLAYER || iobjectType == BORDER)
 	{
-		setOnScreen(false);    //If it collides with the player then it dissappears off screen
+		setOnScreen(false);    //If it collides with the player or border then it dissappears off screen
 	}
 }
