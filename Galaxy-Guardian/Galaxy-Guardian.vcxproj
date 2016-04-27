@@ -83,7 +83,6 @@
     <ClCompile Include="Asteroid.cpp" />
     <ClCompile Include="Background.cpp" />
     <ClCompile Include="BaseObject.cpp" />
-    <ClCompile Include="Boss.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="main.cpp" />
@@ -97,7 +96,6 @@
     <ClInclude Include="Asteroid.h" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="BaseObject.h" />
-    <ClInclude Include="Boss.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Explosion.h" />
     <ClInclude Include="Globals.h" />
