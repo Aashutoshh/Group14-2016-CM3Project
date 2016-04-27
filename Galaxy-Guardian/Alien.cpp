@@ -66,7 +66,21 @@ void Alien::RenderObject()
 		x - frameWidth / 2, y - frameHeight / 2, 0);
 }
 
-void Alien::Collided(int objectType)
+void Alien::Collided(int iObjectType)
 {
+	if (iObjectType == BORDER)
+	{
+		x = 800;     //If they reach the border start back again
+	}
 
+	if (iObjectType == PLAYER)
+	{
+		setOnScreen(false);
+		//TakeLife();  //NB The spaceship class already takes care of this
+	}
+
+	if (iObjectType == BULLET)
+	{
+		setOnScreen(false);
+	}
 }
