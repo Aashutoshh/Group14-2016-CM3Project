@@ -37,7 +37,37 @@ enum KEYS{ UP, DOWN, LEFT, RIGHT, SPACE, A }; //Enumeration for key input arra
 //============================================================================================================
 
 Spaceship *ship1;  //Created our spaceship object pointer
+Alien **a1 = new Alien*[8];  //Declaring a dynamic 2d object arra
 Bullet *bullet; //Created bullet pointer 
+Explosion *explode;
+Background *backdrop;
+AlienBullet *alienBullet;
+AlienBullet *subBossBullet;
+Asteroid *asteroid;
+SubBoss *subBoss;
+
+//Create object pointers for the title, level up and game over screens
+//These are NOT meant to be part of the gameObjects list!!
+Background *startScreen;
+Background *gameoverScreen;
+Background *levelupScreen;
+Background *beatgameScreen;
+
+ALLEGRO_SAMPLE_INSTANCE *soundTrack; //Global so the soundtrack can change according to FSM
+
+int level = 1;      //Variable to keep track of level number
+int score = 0;      //Keep track of score in a level
+int totalScore = 0;  //Total score accumulated in game
+int totalLives = 0; //Hold the updated accumulated lives or tries by the player between levels
+
+//These are made global so the state machine can access them
+ALLEGRO_BITMAP *backGimage = NULL;
+ALLEGRO_BITMAP *midGimage = NULL;
+ALLEGRO_BITMAP *foreGimage = NULL;
+ALLEGRO_SAMPLE *song = NULL;
+ALLEGRO_SAMPLE_ID id1, id2, id3, id4, id5;
+ALLEGRO_SAMPLE *titleTrack = NULL;
+
 //Create the updation list of objects
 list < BaseObject *> gameObjects;   //Created a list of BaseObject type called gameObjects
 
@@ -53,6 +83,9 @@ void __cdecl TakeLife();
 void __cdecl enemiesDown();
 void _cdecl bossesKilled();
 void _cdecl TakeHealth();
+void FSM(int &state, int nextState);  //Global function which sets up our simple Finite State Machine
+void setupAliens(ALLEGRO_BITMAP *image); //Contains for loop which initializes each alien in the grid
+bool allAliensDestroyed();
 
 int main()
 {
@@ -356,6 +389,15 @@ int main()
 
 	return 0;
 }
+
+void setupAliens(ALLEGRO_BITMAP *image)
+{
+
+}
+
+//bool allAliensDestroyed()
+//{
+//}
 
 //Body of fully global functions to be used by the classes
 //Allows other classes to access the ship methods
