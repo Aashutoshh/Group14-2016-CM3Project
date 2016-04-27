@@ -1,12 +1,24 @@
 #pragma once
+
+#include <string>
 #include "BaseObject.h"
 
-//Declaration for explosion class --> when an object is destroyed
+using namespace std;
 
-class Explosion
+class Explosion : public BaseObject
 {
+private:
+
 public:
-	Explosion();
+	Explosion(float ix, float iy, ALLEGRO_BITMAP *iimage);
 	~Explosion();
+//virtual functions 
+	void DestroyObject(); 
+
+	void UpdateObject(); 
+
+	void RenderObject(); 
+
+	void Collided(int objectID); 
 };
 
