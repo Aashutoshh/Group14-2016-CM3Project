@@ -30,3 +30,35 @@ Explosion::~Explosion()
 {
 
 }
+
+void Explosion::DestroyObject()
+{
+	BaseObject::DestroyObject();
+}
+
+void Explosion::UpdateObject()
+{
+	BaseObject::UpdateObject();
+
+	//NB NO BOUNDS CHECKING FOR Explosions
+
+	if (++frameCount >= frameDelay)
+	{
+		curFrame += animationDirection;
+		if (curFrame >= maxFrame)
+		{
+			setOnScreen(false);   //After the last frame remove explosion from screen
+		}
+
+		frameCount = 0;          //Reset Frame count for new explosion
+	}
+
+}
+
+
+
+
+void Explosion::Collided(int objectID)
+{
+	//We aren't concerned with what the explosion collides with so this is blank.
+}
