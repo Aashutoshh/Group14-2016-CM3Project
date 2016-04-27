@@ -87,7 +87,7 @@ void SubBoss::Collided(int objectID)
 	{
 		if (subBossHP > 0)
 		{
-			subBossHP--;    //Since default HP is 5 it will take five bullets to kill him
+			subBossHP--;    //Since default HP is 3 it will take three bullets to kill him
 		}
 		else
 		{

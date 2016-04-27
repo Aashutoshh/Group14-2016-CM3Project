@@ -5,6 +5,8 @@
 #include <cmath>
 #include <ctime>
 
+using namespace std;
+
 Background::Background(ALLEGRO_BITMAP *iimage, float ispeedX)
 {
 	BaseObject::Init(0, 0, ispeedX, 0, -1, 0, 0, 0);
