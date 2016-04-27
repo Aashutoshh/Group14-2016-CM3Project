@@ -43,6 +43,16 @@ void Alien::UpdateObject()
 {
 	BaseObject::UpdateObject();
 
+	if (++frameCount >= frameDelay)
+	{
+		if (++curFrame >= maxFrame)
+			curFrame = 0;
+
+		frameCount = 0;
+	}
+
+	if (x + frameWidth < 0)
+		Collided(BORDER);
 }
 
 void Alien::RenderObject()
