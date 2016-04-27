@@ -55,7 +55,17 @@ void Explosion::UpdateObject()
 
 }
 
+void Explosion::RenderObject()
+{
+	BaseObject::RenderObject(); //incase the method is updated 
+	
 
+	//Animation Updating
+	int fx = (curFrame % animationColumns) * frameWidth;
+	int fy = (curFrame / animationColumns) * frameHeight;      //ingle row for animation therefore  not included here
+
+	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);
+}
 
 
 void Explosion::Collided(int objectID)
