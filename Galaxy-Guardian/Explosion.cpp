@@ -64,6 +64,8 @@ void Explosion::RenderObject()
 	int fx = (curFrame % animationColumns) * frameWidth;
 	int fy = (curFrame / animationColumns) * frameHeight;      //ingle row for animation therefore  not included here
 
+	//Allegro drawing bitmap functions set up here for the space ship
+	//NB must resolve in main.cpp to avoid unresolved symbols compilation error when building
 	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight, x - frameWidth / 2, y - frameHeight / 2, 0);
 }
 
