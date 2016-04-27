@@ -59,6 +59,11 @@ void Alien::RenderObject()
 {
 	BaseObject::RenderObject();
 
+	int fx = curFrame*frameWidth;   //For simple one row sprite sheets
+	int fy = 0;
+
+	al_draw_bitmap_region(image, fx, fy, frameWidth, frameHeight,
+		x - frameWidth / 2, y - frameHeight / 2, 0);
 }
 
 void Alien::Collided(int objectType)
