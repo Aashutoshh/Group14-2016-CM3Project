@@ -37,6 +37,7 @@ enum KEYS{ UP, DOWN, LEFT, RIGHT, SPACE, A }; //Enumeration for key input arra
 //============================================================================================================
 
 Spaceship *ship1;  //Created our spaceship object pointer
+Alien **a1 = new Alien*[8];  //Declaring a dynamic 2d object array
 
 //Create the updation list of objects
 list < BaseObject *> gameObjects;   //Created a list of BaseObject type called gameObjects
