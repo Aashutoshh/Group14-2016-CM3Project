@@ -3,7 +3,7 @@
 
 //Declaration for special items class --> power ups and health
 
-class PowerUp
+class PowerUp : BaseObject
 {
 public:
 	PowerUp();
