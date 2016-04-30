@@ -4,19 +4,18 @@
 using namespace std;
 
 
-
-
 //Declaration for spaceship bullet class
-// Polymorphism displayed 
-class Bullet :  public BaseObject{
-	 
-private:
-	void(*enemiesDown)(void);
-	void(*bossesKilled)(void);
 
+class Bulllet: public BaseObject{
+
+	// private variables 
+private: 
+	void(*ScorePoint)(void);
+	// public variables 
 public:
-	Bullet(float x, float y, void(*enemiesDown)(void), void(*bossesKilled)(void), ALLEGRO_BITMAP *iimage);
-	~Bullet();
+	Bulllet();
+	~Bulllet();
+    Bulllet(float x, float y, void(*ScorePoint)(void));
 
 
 	//Functions to override base class Virtual Functions
@@ -24,7 +23,5 @@ public:
 	void UpdateObject();
 	void RenderObject();
 	void Collided(int objectID);
-
-
 };
 
