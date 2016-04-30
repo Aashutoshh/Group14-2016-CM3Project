@@ -37,6 +37,7 @@ enum KEYS{ UP, DOWN, LEFT, RIGHT, SPACE, A }; //Enumeration for key input arra
 //============================================================================================================
 
 Spaceship *ship1;  //Created our spaceship object pointer
+Alien **a1 = new Alien*[8];  //Declaring a dynamic 2d object array
 
 //Create the updation list of objects
 list < BaseObject *> gameObjects;   //Created a list of BaseObject type called gameObjects
@@ -49,6 +50,7 @@ list < BaseObject *>::iterator itr2;  //created an iterator of BaseObject type c
 //prototypes
 /*Insert prototypes of necessary global functions here for main.cpp*/
 //======================================================================================================================
+void setupAliens(ALLEGRO_BITMAP *image); //Contains for loop which initializes each alien in the grid
 
 int main()
 {
@@ -332,5 +334,26 @@ int main()
 
 	return 0;
 }
+void setupAliens(ALLEGRO_BITMAP *image)
+{
+	float tempX = 0;
+	float tempY = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		a1[i] = new Alien[6];   //Each row is a set of 6 aliens --> 8 rows of 6 aliens each
+	}
 
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < 6; j++)
+		{
+			tempX = tempX + 114;
+			a1[i][j].InitAlien(800 + tempX, 120 + tempY, image, TakeLife);  //Initialize each alien
+			gameObjects.push_back(&a1[i][j]);
+		}
+		tempX = 0;
+		tempY = tempY + 49;
+	}
+
+}
 
