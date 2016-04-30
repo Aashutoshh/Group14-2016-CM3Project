@@ -392,7 +392,25 @@ int main()
 
 void setupAliens(ALLEGRO_BITMAP *image)
 {
+	float tempX = 0;
+	float tempY = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		a1[i] = new Alien[6];   //Each row is a set of 6 aliens --> 8 rows of 6 aliens each
+	}
 
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < 6; j++)
+		{
+			tempX = tempX + 114;
+			a1[i][j].InitAlien(800 + tempX, 120 + tempY, image,
+				);  //Initialize each alien
+			gameObjects.push_back(&a1[i][j]);
+		}
+		tempX = 0;
+		tempY = tempY + 49;
+	}
 }
 
 //bool allAliensDestroyed()
