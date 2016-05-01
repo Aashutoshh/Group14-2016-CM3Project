@@ -1,0 +1,71 @@
+﻿'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Users\Praneel\Documents\Visual Studio 2013\Projects\CompMethods3\ALLEGRO GAME DEVELOPMENT\Galaxy-Guardian\Debug\Galaxy-Guardian.exe'. Symbols loaded.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntdll.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\KernelBase.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\allegro-5.0.10-monolith-md-debug.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp120d.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcr120d.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ole32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\shlwapi.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\winmm.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\shell32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.9600.17415_none_dad8722c5bcc2d8f\GdiPlus.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\user32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\comdlg32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\gdi32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\advapi32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\opengl32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcr110d.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\combase.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcrt.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\rpcrt4.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sechost.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\winmmbase.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.9600.17810_none_7c5b6194aa0716f1\comctl32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\glu32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ddraw.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sspicli.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cfgmgr32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\devobj.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dciman32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cryptbase.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\SHCore.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\bcryptprimitives.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\imm32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msctf.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\d3d9.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\version.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dwmapi.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\uxtheme.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\igdumdim32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\nvinit.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\nvinit.dll'
+The thread 0x22e4 has exited with code 0 (0x0).
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel.appcore.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Program Files\WIDCOMM\Bluetooth Software\syswow64\BtMmHook.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\oleaut32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\psapi.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\igdusc32.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dsound.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\powrprof.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Program Files (x86)\Internet Download Manager\idmmkb.dll'. Module was built without symbols.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\clbcatq.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\MMDevAPI.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\AudioSes.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\WindowsCodecs.dll'. Loading disabled by Include/Exclude setting.
+The thread 0x23e0 has exited with code 0 (0x0).
+The thread 0x45c has exited with code 0 (0x0).
+'Galaxy-Guardian.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\igdusc32.dll'
+The thread 0x51c has exited with code 0 (0x0).
+The thread 0x1d74 has exited with code 0 (0x0).
+The thread 0x14b8 has exited with code 0 (0x0).
+The thread 0x25d4 has exited with code 0 (0x0).
+The thread 0x2754 has exited with code 0 (0x0).
+The thread 0x1658 has exited with code 0 (0x0).
+The thread 0x275c has exited with code 1 (0x1).
+'Galaxy-Guardian.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\igdumdim32.dll'
+'Galaxy-Guardian.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\d3d9.dll'
+The thread 0x2670 has exited with code 0 (0x0).
+The thread 0x2530 has exited with code 0 (0x0).
+The thread 0x16a0 has exited with code 0 (0x0).
+The program '[7200] Galaxy-Guardian.exe' has exited with code 0 (0x0).
