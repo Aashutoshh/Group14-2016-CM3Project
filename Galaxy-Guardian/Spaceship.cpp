@@ -199,7 +199,7 @@ void Spaceship::Collided(int iobjType)
 	if (iobjType == ALIEN || iobjType == ENEMY || iobjType == BOSS)
 	{
 		x = 20;  //If you collided with enemy reset player ship back to default position
-		y = 200;
+		y = 560; //Spawn near bottom left of screen for safety
 		tries--;
 		enemiesDestroyed++; //Player would have sacrificed a life to destroy just one ship
 	}
