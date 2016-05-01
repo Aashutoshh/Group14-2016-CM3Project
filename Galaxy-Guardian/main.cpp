@@ -404,8 +404,7 @@ void setupAliens(ALLEGRO_BITMAP *image)
 		for (int j = 0; j < 6; j++)
 		{
 			tempX = tempX + 114;
-			a1[i][j].InitAlien(800 + tempX, 120 + tempY, image,
-				);  //Initialize each alien
+			a1[i][j].InitAlien(800 + tempX, 120 + tempY, image, TakeLife);  //Initialize each alien
 			gameObjects.push_back(&a1[i][j]);
 		}
 		tempX = 0;
