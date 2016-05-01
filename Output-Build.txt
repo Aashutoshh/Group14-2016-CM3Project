@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: Galaxy-Guardian, Configuration: Debug Win32 ------
+1>  main.cpp
+1>  Galaxy-Guardian.vcxproj -> C:\Users\Praneel\Documents\Visual Studio 2013\Projects\CompMethods3\ALLEGRO GAME DEVELOPMENT\Galaxy-Guardian\Debug\Galaxy-Guardian.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
