@@ -1,4 +1,16 @@
 ﻿1>------ Build started: Project: Galaxy-Guardian, Configuration: Debug Win32 ------
 1>  main.cpp
+1>  Generating Code...
+1>  Skipping... (no relevant changes detected)
+1>  SubBoss.cpp
+1>  Spaceship.cpp
+1>  PowerUp.cpp
+1>  Explosion.cpp
+1>  Bullet.cpp
+1>  BaseObject.cpp
+1>  Background.cpp
+1>  Asteroid.cpp
+1>  AlienBullet.cpp
+1>  Alien.cpp
 1>  Galaxy-Guardian.vcxproj -> C:\Users\Praneel\Documents\Visual Studio 2013\Projects\CompMethods3\ALLEGRO GAME DEVELOPMENT\Galaxy-Guardian\Debug\Galaxy-Guardian.exe
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
