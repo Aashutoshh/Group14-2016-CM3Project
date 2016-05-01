@@ -40,7 +40,7 @@
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\igdumdim32.dll'. Loading disabled by Include/Exclude setting.
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\nvinit.dll'. Loading disabled by Include/Exclude setting.
 'Galaxy-Guardian.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\nvinit.dll'
-The thread 0xb2c has exited with code 0 (0x0).
+The thread 0x22e4 has exited with code 0 (0x0).
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel.appcore.dll'. Loading disabled by Include/Exclude setting.
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Program Files\WIDCOMM\Bluetooth Software\syswow64\BtMmHook.dll'. Loading disabled by Include/Exclude setting.
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\oleaut32.dll'. Loading disabled by Include/Exclude setting.
@@ -48,24 +48,24 @@ The thread 0xb2c has exited with code 0 (0x0).
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\igdusc32.dll'. Loading disabled by Include/Exclude setting.
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dsound.dll'. Loading disabled by Include/Exclude setting.
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\powrprof.dll'. Loading disabled by Include/Exclude setting.
+'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Program Files (x86)\Internet Download Manager\idmmkb.dll'. Module was built without symbols.
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\clbcatq.dll'. Loading disabled by Include/Exclude setting.
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\MMDevAPI.dll'. Loading disabled by Include/Exclude setting.
-'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Program Files (x86)\Internet Download Manager\idmmkb.dll'. Module was built without symbols.
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\AudioSes.dll'. Loading disabled by Include/Exclude setting.
 'Galaxy-Guardian.exe' (Win32): Loaded 'C:\Windows\SysWOW64\WindowsCodecs.dll'. Loading disabled by Include/Exclude setting.
-The thread 0x2078 has exited with code 0 (0x0).
-The thread 0x1064 has exited with code 0 (0x0).
-The thread 0x13f0 has exited with code 0 (0x0).
+The thread 0x23e0 has exited with code 0 (0x0).
+The thread 0x45c has exited with code 0 (0x0).
 'Galaxy-Guardian.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\igdusc32.dll'
-The thread 0x1bc8 has exited with code 0 (0x0).
-The thread 0x1b48 has exited with code 0 (0x0).
-The thread 0x22b0 has exited with code 0 (0x0).
-The thread 0x17d4 has exited with code 0 (0x0).
-The thread 0x1aa0 has exited with code 0 (0x0).
-The thread 0x1c6c has exited with code 1 (0x1).
+The thread 0x51c has exited with code 0 (0x0).
+The thread 0x1d74 has exited with code 0 (0x0).
+The thread 0x14b8 has exited with code 0 (0x0).
+The thread 0x25d4 has exited with code 0 (0x0).
+The thread 0x2754 has exited with code 0 (0x0).
+The thread 0x1658 has exited with code 0 (0x0).
+The thread 0x275c has exited with code 1 (0x1).
 'Galaxy-Guardian.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\igdumdim32.dll'
 'Galaxy-Guardian.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\d3d9.dll'
-The thread 0x20bc has exited with code 0 (0x0).
-The thread 0x246c has exited with code 0 (0x0).
-The thread 0x27e0 has exited with code 0 (0x0).
-The program '[6236] Galaxy-Guardian.exe' has exited with code 0 (0x0).
+The thread 0x2670 has exited with code 0 (0x0).
+The thread 0x2530 has exited with code 0 (0x0).
+The thread 0x16a0 has exited with code 0 (0x0).
+The program '[7200] Galaxy-Guardian.exe' has exited with code 0 (0x0).
