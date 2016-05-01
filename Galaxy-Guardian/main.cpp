@@ -107,6 +107,7 @@ int main()
 
 	ALLEGRO_BITMAP *shipImage = NULL;
 	ALLEGRO_BITMAP *powerBulletImage = NULL; // initialise the bitmap image
+	ALLEGRO_BITMAP *alienImage = NULL;
 
 	//=================================================================================================================
 	//Allegro Variables Here
@@ -161,6 +162,10 @@ int main()
 	//==============================================================================================================================//
 	//========    SET UP OF THE ALIENS USING THE SET UP GLOBAL FUNCTION      ======================================================//
 	//==============================================================================================================================//
+	alienImage = al_load_bitmap("EnemyShip2.png");             //Can change the bitmap during level transition
+	//al_convert_mask_to_alpha(alienImage, al_map_rgb(0, 0, 0)); //Since background of alien is black
+	al_convert_mask_to_alpha(alienImage, al_map_rgb(255, 0, 255)); //Make background Magenta transparent
+	setupAliens(alienImage); //NB This function body automatically adds each alien to the list
 
 	//Player bullet image
 	powerBulletImage = al_load_bitmap("PowerBullet.png");// load the power bullet image 
@@ -315,9 +320,12 @@ int main()
 
 		//FREE UP MEMORY AS SOON AS AN OBJECT GOES OFF SCREEN
 		//HELPS US PUT MORE AND MORE OBJECTS ON SCREEN WITHOUT AFFECTING MEMORY TOO MUCH
+		//NB THIS DOES NOT DELETE THE ALIEN ARRAY FROM MEMORY. This only occurs at end of the code
+		//THE ALIENS WILL HAVE TO BE SEPARATELY ERASED ONE BY ONE AFTER COLLISSION WITH A BULLET
+
 		for (itr1 = gameObjects.begin(); itr1 != gameObjects.end();)  //we leave out the ++itr1 part here since the body updates
 		{
-			if (!(*itr1)->getOnScreen())
+			if ((!(*itr1)->getOnScreen()) && ((*itr1)->getObjType() != ALIEN))
 			{
 				delete (*itr1);
 				itr1 = gameObjects.erase(itr1);  //NB We don't call the destroy method here since we don't 
@@ -326,8 +334,25 @@ int main()
 			{
 				itr1++;
 			}
-		}                               
+		} 
 
+		//Erase the aliens from the list if they were hit by a bullet
+		//Attempting to delete each alien using this method was causing errors so we just set it to erase the aliens from the list
+		//Hopefully erasing the aliens at the end using the conventional method will prevent memory leaks.
+		for (itr1 = gameObjects.begin(); itr1 != gameObjects.end();)  //we leave out the ++itr1 part here since the body updates
+		{
+			if ((!(*itr1)->getOnScreen()) && ((*itr1)->getObjType() == ALIEN))
+			{
+				//delete (*itr1);
+				//delete(&itr1);
+				itr1 = gameObjects.erase(itr1);  //NB We don't call the destroy method here since we don't 
+			}                                   //want to destroy the bitmap images at this stage
+
+			else
+			{
+				itr1++;
+			}
+		}
 
 		//======================================================================================================
 		//RENDER==>UPDATE THE OBJECT'S POSITION ON SCREEN AND DRAW IT ACCORDINGLY
@@ -369,19 +394,24 @@ int main()
 	//NB Whatever resources you add later in the project must be removed here to prevent
 	//memory leaks. -- PM==========================================================================================//
 
-	for (itr1 = gameObjects.begin(); itr1 != gameObjects.end();)  //we leave out the ++itr1 part here since the body updates
+	for (itr1 = gameObjects.begin(); itr1 != gameObjects.end() && ((*itr1)->getObjType() != ALIEN);)  //we leave out the ++itr1 part here since the body updates
 	{
 		(*itr1)->DestroyObject();
 		delete (*itr1);                  //Delete the objects themselves
 		itr1 = gameObjects.erase(itr1);  //Remove this index of itr1 completely then return back to the next
 	}                                    //Loop updation in body 
 
-
+	//Delete the alien array objects separately
+	for (int i = 0; i < 8; ++i) {
+		delete[] a1[i];
+	}
+	delete[] a1;
 
 	//=======================================================================================================//
 	//                    DESTROY SHELL OBJECTS USED BY ALLEGRO LIBRARIES                                    //
 	//=========================================================================================================//
 	al_destroy_bitmap(shipImage);
+	al_destroy_bitmap(alienImage);
 	al_destroy_font(font18);
 	al_destroy_event_queue(event_queue);
 	al_destroy_timer(timer);
